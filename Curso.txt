@@ -3,3 +3,10 @@ tsc "NombreArchivo" -w | Comando para convertir de typescript a Javascript autom
 tsc -init              | Indica al vscode que es un proyecto de angular, se usa para que se genere el Javascript        
                        | automáticamente
 tsc                    | Genera automáticamente todos los javascript de los archivos tsc
+
+ng serve -p 4201       | Especifica el puerto para ejecutar la app de angular
+ng serve -o            | Se usa cuando se ejecuta por primera vez.
+npm install            | Si quiero eliminar el node_modules, debo ejecutar este comando para que se genere de nuevo
+                       | el node_modules no se almacena en el repositorio, así que si hay que sincronizar, se debe ejecutar este comando.
+
+                       
