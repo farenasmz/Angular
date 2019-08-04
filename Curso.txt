@@ -1,0 +1,5 @@
+tsc "NombreArchivo" -- comando para convertir de typescript a Javascript
+tsc "NombreArchivo" -w | Comando para convertir de typescript a Javascript automáticamente
+tsc -init              | Indica al vscode que es un proyecto de angular, se usa para que se genere el Javascript        
+                       | automáticamente
+tsc                    | Genera automáticamente todos los javascript de los archivos tsc
