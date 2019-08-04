@@ -73,16 +73,16 @@ var thor = avengers[0], capi = avengers[1], ironman = avengers[2];
 //------------ PROMESAS----------------
 var prom1 = new Promise(function (resolve, reject) {
     setTimeout(function () {
-        console.log("Promesa terminada");
+        // console.log("Promesa terminada")
         resolve();
         //Si Termina mal
         //reject();
     }, 1500);
 });
 prom1.then(function () {
-    console.log("Ha terminado bien!");
+    //console.log("Ha terminado bien!");
 }, function () {
-    console.error("Ha ocurrido un error");
+    //console.error("Ha ocurrido un error");
 });
 function mission(XMEN) {
     console.log("enviando a: " + XMEN.nombre);
@@ -101,3 +101,25 @@ var Avenger = /** @class */ (function () {
     return Avenger;
 }());
 var aven = new Avenger("Wolverine");
+//------Clases públicas, export -----------------------
+//El export equivale al  public.
+//import{xmen} from "./clases/xmen.class" con esto ya puedo instanciar un nuevo objeto.
+//Esto es mucho mejor que agregar <script src"...."
+//Si yo necesito exportar todas las clases d euna carpeta y no tener que agregar uno por uno.
+//se procede a hacer un archivo ts y ahí hacer un export de todas las clases  export{xmen} from "./clases/xmen.class" 
+//Ahora en el archivo que quiero importar, usar o instanciar la clase puedo agregar: import{xmen, villano, otroHeroe} from "./clases/xmen.class" 
+//-----------Decoradores de clases-----------------
+/* normalmente aparece una advertencia en el decorador @consola, así que se debe ejecutar
+el siguiente comando para que no dé mas ese error: tsc --experimentalDecorators, luego agregar en el tsconfig.json
+"experimentalDecorators" : true */
+function consola(constructor) {
+    console.log("constructor");
+}
+;
+var villano = /** @class */ (function () {
+    //public nombre:string;
+    function villano(nombre) {
+        this.nombre = nombre;
+    }
+    return villano;
+}());
