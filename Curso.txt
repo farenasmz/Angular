@@ -8,5 +8,6 @@ ng serve -p 4201       | Especifica el puerto para ejecutar la app de angular
 ng serve -o            | Se usa cuando se ejecuta por primera vez.
 npm install            | Si quiero eliminar el node_modules, debo ejecutar este comando para que se genere de nuevo
                        | el node_modules no se almacena en el repositorio, así que si hay que sincronizar, se debe ejecutar este comando.
-
+* Si tengo un problema con el número de caracteres para el template de un component debo ir al tslint.json y buscar la propiedad max-line-length
+ng g c footer          | genera los componentes.
                        
